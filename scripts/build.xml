@@ -4,7 +4,7 @@
  * Copyright Tyto Software Pvt. Ltd.
  */
 -->
-<project name="demo" default="runtestsedgenew">
+<project name="demo" default="runtestschrome">
 	<taskdef name="sahi" classname="net.sf.sahi.ant.RunSahiTask" classpath="../../lib/ant-sahi.jar"/>
 	
 	<target name="set_timestamp">
@@ -14,10 +14,10 @@
 	</target>
 	
 	
-	<target name="set_properties_edgenew" depends="set_timestamp">
+	<target name="set_properties_chrome" depends="set_timestamp">
     	<property name="scriptDir" value="D:/SahiPro9.5.0/userdata/scripts/"/>
     	<property name="scriptName" value="Cytiva/TestAutomation.dd.csv"/>
-		<property name="browser" value="firefox"/>
+		<property name="browser" value="chrome"/>
 		<property name="startWith" value="BROWSER"/>
 		<property name="sendemail" value="false"/>
 		<property name="emailtrigger" value="success,failure,user_aborted,aborted_timeout"/>
@@ -26,7 +26,7 @@
 		<property name="sendemailperiodically" value="false"/>
 		<property name="sendemailperiodicallytime" value=""/>
 		<property name="emailPasswordHidden" value="true"/>
-		<property name="baseURL" value="http://sahitest.com/demo"/>
+		<property name="baseURL" value="http://sahitest.com/demo/"/>
 		<property name="host" value="localhost"/>
 		<property name="port" value="9999"/>
 		<property name="singlesession" value="false"/>
@@ -43,7 +43,7 @@
 		<property name="jsCodeCoverage" value="false"/>
 	</target>
 
-	<target name="runtestsedgenew" depends="set_properties_edgenew">
+	<target name="runtestschrome" depends="set_properties_chrome">
 		<sahi suite="${scriptName}"
 			browsertype="${browser}"
 			startWith="${startWith}"
@@ -70,13 +70,14 @@
 			isAutohealEnabled="${isAutohealEnabled}"
 			suiteTimeOut="${suiteTimeOut}"
 			gitLogIntegration="${gitLogIntegration}"
-			jsCodeCoverage="${jsCodeCoverage}"
-			tags="smoke">
+			jsCodeCoverage="${jsCodeCoverage}">
+			<!-- Offline reports -->
+			<report type="html" logdir="D:\SahiPro9.5.0\CytivaAutomation\Reports"/>
 		</sahi>
-		<antcall target="failsahiedgenew"/>
+		<antcall target="failsahichrome"/>
 	</target>
 
-    <target name="failsahiedgenew" depends="set_properties_edgenew" if="sahi.failed.${browser}">
+    <target name="failsahichrome" depends="set_properties_chrome" if="sahi.failed.${browser}">
         <fail message="Sahi tests failed on browser ${browser}!"/>
     </target>		
 </project>
