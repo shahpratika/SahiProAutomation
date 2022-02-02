@@ -70,7 +70,8 @@
 			isAutohealEnabled="${isAutohealEnabled}"
 			suiteTimeOut="${suiteTimeOut}"
 			gitLogIntegration="${gitLogIntegration}"
-			jsCodeCoverage="${jsCodeCoverage}">
+			jsCodeCoverage="${jsCodeCoverage}"
+			tags="high">
 			<!-- Offline reports -->
 			<report type="html" logdir="D:\SahiPro9.5.0\CytivaAutomation\Reports"/>
 		</sahi>
