@@ -1,0 +1,8 @@
+"TestCase","Key Word","Argument 1","Argument 2"
+,"loadSahi","FunctionsLib.sah"
+
+"TC_01","[Documentation]","This is my add books and verify testcase"
+,"Cytiva Login","Username:test","Password:MgkKEQBU"
+,"Cytiva Add Books To Cart3","Java:3","Ruby:2","Python:1"
+,"Cytiva Verify Total","Total:1650"
+,"Cytiva Logout"

@@ -1,0 +1,41 @@
+
+/**
+* CytivaLogin
+* @param $Username - 
+* @param $Password - 
+*/
+
+
+function CytivaLogin($Username, $Password) {
+	_setValue(_textbox("user"), $Username);
+	_setPassword(_password("password"), $Password);
+	_focusWindow();
+	_takeScreenShot();
+	_click(_submit("Login"));
+}
+/**
+* CytivaAddBooksToCart3
+* @param $Java - 
+* @param $Ruby - 
+* @param $Python - 
+*/
+function CytivaAddBooksToCart3($Java, $Ruby, $Python) {
+	_setValue(_textbox("q"), $Java);
+	_setValue(_textbox("q[1]"), $Ruby);
+	_setValue(_textbox("q[2]"), $Python);
+	_click(_button("Add"));
+}
+/**
+* CytivaVerifyTotal
+* @param $Total - 
+*/
+function CytivaVerifyTotal($Total) {
+	_assertVisible(_textbox("total"));
+	_assertEqual($Total, _getValue(_textbox("total")));
+}
+/**
+* CytivaLogout
+*/
+function CytivaLogout() {
+	_click(_button("Logout"));
+}
