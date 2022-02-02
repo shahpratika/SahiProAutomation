@@ -17,7 +17,7 @@
 	<target name="set_properties_edgenew" depends="set_timestamp">
     	<property name="scriptDir" value="D:/SahiPro9.5.0/userdata/scripts/"/>
     	<property name="scriptName" value="Cytiva/TestAutomation.dd.csv"/>
-		<property name="browser" value="edgenew"/>
+		<property name="browser" value="firefox"/>
 		<property name="startWith" value="BROWSER"/>
 		<property name="sendemail" value="false"/>
 		<property name="emailtrigger" value="success,failure,user_aborted,aborted_timeout"/>
