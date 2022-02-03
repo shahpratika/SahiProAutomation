@@ -71,7 +71,7 @@
 			suiteTimeOut="${suiteTimeOut}"
 			gitLogIntegration="${gitLogIntegration}"
 			jsCodeCoverage="${jsCodeCoverage}"
-			tags="a">
+			tags="smoke">
 			<!-- Offline reports -->
 			<report type="html" logdir="D:\SahiPro9.5.0\CytivaAutomation\Reports"/>
 		</sahi>
