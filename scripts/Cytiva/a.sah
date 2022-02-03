@@ -1,1 +1,2 @@
+_assert(false);
 _log("a");
