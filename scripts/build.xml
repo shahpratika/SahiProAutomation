@@ -19,7 +19,7 @@
     	<property name="scriptName" value="Cytiva/TestAutomation.dd.csv"/>
 		<property name="browser" value="chrome"/>
 		<property name="startWith" value="BROWSER"/>
-		<property name="sendemail" value="false"/>
+		<property name="sendemail" value="true"/>
 		<property name="emailtrigger" value="success,failure,user_aborted,aborted_timeout"/>
 		<property name="emailproperties" value="true"/>
 		<property name="sendemailForSubSuite" value="false"/>
