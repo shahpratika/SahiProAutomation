@@ -21,7 +21,7 @@
 		<property name="startWith" value="BROWSER"/>
 		<property name="sendemail" value="false"/>
 		<property name="emailtrigger" value="success,failure,user_aborted,aborted_timeout"/>
-		<property name="emailproperties" value=""/>
+		<property name="emailproperties" value="true"/>
 		<property name="sendemailForSubSuite" value="false"/>
 		<property name="sendemailperiodically" value="false"/>
 		<property name="sendemailperiodicallytime" value=""/>
