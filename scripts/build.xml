@@ -25,7 +25,7 @@
 		<property name="sendemailForSubSuite" value="false"/>
 		<property name="sendemailperiodically" value="false"/>
 		<property name="sendemailperiodicallytime" value=""/>
-		<property name="emailPasswordHidden" value="true"/>
+		<property name="emailPasswordHidden" value="false"/>
 		<property name="baseURL" value="http://sahitest.com/demo/"/>
 		<property name="host" value="localhost"/>
 		<property name="port" value="9999"/>
